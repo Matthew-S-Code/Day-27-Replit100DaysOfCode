@@ -1,0 +1,53 @@
+import random, os, time
+
+def characterName():
+  name = input("Name your character: ")
+
+def characterType():
+  type = random.randint(1, 4)
+  print("Types: human, imp, wizard, elf")
+  if type == 1: 
+    print("Type: human")
+  elif type == 2:
+    print("Type: imp")
+  elif type == 3:
+    print("Type: wizard")
+  elif type == 4:
+    print("Type: elf")
+  else:
+    print("Error try again")
+    exit()
+
+def health():
+  sided6 = random.randint(1,6)
+  sided12 = random.randint(1,12)
+  div2 = sided6 * sided12
+  healthStat = div2 + 10
+  print("Character Health: ", healthStat)
+
+def strength():
+  sided6 = random.randint(1,6)
+  sided12 = random.randint(1,12)
+  div2 = sided6 * sided12
+  strengthStat = div2 + 12
+  print("Character Strength: ", strengthStat)
+
+print("Character Creator")
+print()
+time.sleep(2)
+os.system("clear")
+
+create = "yes"
+while create == "yes" or create == "Yes":
+  characterName()
+  print()
+  characterType()
+  print()
+  health()
+  print()
+  strength()
+  print()
+  
+  create = input("Do you want to create another character? ")
+  time.sleep(1)
+  os.system("clear")
